@@ -12,7 +12,6 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Consulta SQL para obtener los departamentos
 // Cerrar la conexión
 $conn->close();
 ?>
