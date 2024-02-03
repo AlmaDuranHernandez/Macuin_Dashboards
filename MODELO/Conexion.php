@@ -13,19 +13,6 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para obtener los departamentos
-$sql = "SELECT * FROM departamentos";
-$result = $conn->query($sql);
-
-// Verificar si hay resultados
-if ($result->num_rows > 0) {
-    // Mostrar los departamentos
-    while ($row = $result->fetch_assoc()) {
-        echo "ID: " . $row["departamento_id"] . " - Departamento: " . $row["departamento"] . "<br>";
-    }
-} else {
-    echo "No se encontraron departamentos";
-}
-
 // Cerrar la conexión
 $conn->close();
 ?>
