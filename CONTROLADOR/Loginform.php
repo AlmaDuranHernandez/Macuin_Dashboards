@@ -21,13 +21,13 @@ and pass='$Password'");
 
 if(mysqli_num_rows($Validar_Login) > 0){
     $_SESSION['usuario'] = $usuario;
-    header("location: ../index.html");
+    header("location: ../index.php");
     exit();
 }else{
     echo
     "<script>
     swal('Error','Los datos ingresados son incorrectos','error').then(function() {
-        window.location = '../Vista/Login.php';
+        window.location = '../VISTAS/Login.php';
     });
   </script>"; 
 }
