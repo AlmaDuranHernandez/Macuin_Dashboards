@@ -10,11 +10,11 @@
 
 
 
-include '../Conector.php';
+include '../MODELO/Conexion.php';
 
 
 $usuario = $_POST['usuario'];
-$rootKey = $_POST['Password'];
+$Password = $_POST['Password'];
 
 $Validar_Login = mysqli_query($conn, "SELECT * FROM usuario WHERE nombre='$usuario'
 and pass='$Password'");
