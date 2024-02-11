@@ -7,7 +7,7 @@
 }
 
 body{
-    /*Formulariobackground-image: url(../Photo/2.jpeg);*/
+    background-image: url(../Photo/2.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

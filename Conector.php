@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1";
 $username = "root"; //<------ Pongan su Usuario de su MYSQL
-$password = "pass"; // <----- Pongan su contraseña de su MYSQL
+$password = ""; // <----- Pongan su contraseña de su MYSQL
 $database = "macuindb";
 
 // Crear una conexión
@@ -13,8 +13,8 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para obtener los departamentos
-$sql = "SELECT * FROM departamentos";
-$result = $conn->query($sql);
+//$sql = "SELECT * FROM departamentos";
+//$result = $conn->query($sql);
 
 // Verificar si hay resultados
 if ($result->num_rows > 0) {
@@ -27,5 +27,5 @@ if ($result->num_rows > 0) {
 }
 
 // Cerrar la conexión
-$conn->close();
+
 ?>

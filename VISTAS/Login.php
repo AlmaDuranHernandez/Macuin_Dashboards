@@ -21,23 +21,23 @@
                     <button id="btn_iniciar_sesion">Iniciar sesion</button>
                   </div>
                   <div class="caja_trasera_registro">
-                    <h3>¿Aún no tienes  cuenta?</h3>
-                    <p>Crea una cuenta para acceder</p>
-                    <button id="btn_registro">Crear cuenta</button> 
+                    <h3>¿Olvidaste tu contraseña?</h3>
+                    <p>Contacta con tu administrador </p>
+                    <button id="btn_registro">Contactar</button> 
                   </div>
               </div>
         
 
               <div class="contenedor_login_registro">
 
-                <form action="../Controlador/Login_Usuarios.php" method="POST" class="formulario_login">
+                <form action="../CONTROLADOR/Loginform.php" method="POST" class="formulario_login">
                   <h2>Iniciar Sesión</h2>
                   <input type="text" placeholder="Usuario" name = "usuario">
                   <input type="password" placeholder="Contraseña" name = "Password">
                   <button>Ingresar</button>
                 </form>
-                <form action="../Controlador/Registor_Usuarios.php" method="POST" class="formulario_registro">
-                  <h2>Registrate</h2>
+                <form action="../CONTROLADOR/Loginform.php" method="POST" class="formulario_registro">
+                  <h2>Recuperar contraseña</h2>
                   <input type="text" placeholder="Usuario" name = "usuario">
                   <input type="text" placeholder="Correo Electronico" name = "correo">
                  
@@ -47,6 +47,6 @@
               </div>
          </div>
       </main>
-      <script src="../Publico/JS/scrip.js"></script>
+      <script src="../GLOBAL/JS/login.js"></script>
   </body>
 </html>
