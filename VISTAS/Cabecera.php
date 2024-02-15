@@ -18,21 +18,21 @@
      <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
     </button>
     <div id="my-nav" class="collapse navbar-collapse">
-      <div class="logo"><img src="../../../Proyecto/Macuin_Dashboards/GLOBAL/PHOTO/Captura de pantalla 2024-02-13 075550.png"></div>
+      <div class="logo"><img src="../../../Proyecto/Macuin_Dashboards/GLOBAL/PHOTO/logo.png"></div>
        <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="../index.php"><span class="sr-only "><i class="bi bi-house-door"></i>  HOME</span></a>
+          <a class="nav-link active" href="../../../Proyecto/Macuin_Dashboards/index.php"><span class="sr-only "><i class="bi bi-house-door"></i>  HOME</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="../../CC/Vista/mostrarcarrito.php"><span class="sr-only "><i class="bi bi-cart"></i>    (<?php
+          <a class="nav-link active" href="../../CC/Vista/mostrarcarrito.php"><span class="sr-only ">NOTIFICACIONES  (<?php
            echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
            ?>)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="../../CC/Vista/miscompras.php"><span class="sr-only ">MIS COMPRAS</span></a>
+          <a class="nav-link active" href="../../CC/Vista/miscompras.php"><span class="sr-only "> AYUDA </span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active " href="../../CC/Vista/contactanos.php"><span class="sr-only ">CONTÁCTANOS</span></a>
+          <a class="nav-link active " href="../../CC/Vista/contactanos.php"><span class="sr-only ">ADMINISTRAR PERFIL</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="../../../Proyecto/Macuin_Dashboards/VISTAS/Login.php"><span class="sr-only ">CERRAR SESIÓN</span></a>
