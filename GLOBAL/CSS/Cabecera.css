@@ -70,10 +70,4 @@ body{
     border-radius: 10px; 
 }
 
-.card{
-max-width: 80vh;
-height: 110%!important;
-justify-content: center;
-align-items: center;
 
-}
