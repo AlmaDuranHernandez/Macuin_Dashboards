@@ -51,7 +51,7 @@ body{
         content: "";
         width: 0;
         height: 4px;
-        background-color: #46a2fd;
+        background-color: #b2dafa;
         position: absolute;
         bottom: 0;
         right: 50%;
@@ -65,9 +65,15 @@ body{
 
 
 .logo img {
-    width: 200px; 
+    width: 170px; 
     height: auto; 
     border-radius: 10px; 
 }
 
+.card{
+max-width: 80vh;
+height: 110%!important;
+justify-content: center;
+align-items: center;
 
+}

@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(../Photo/2.jpeg);
+    background: linear-gradient(45deg, #6c4675, #8c8ad8, #96c6ec, #fff);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@ main{
     display: flex;
     justify-content: center;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 128, 225, 0.5);
+    background-color: #333;
 }
 
 .caja_trasera div{
