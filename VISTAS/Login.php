@@ -30,16 +30,16 @@
 
               <div class="contenedor_login_registro">
 
-                <form action="../CONTROLADOR/Loginform.php" method="POST" class="formulario_login">
+                <form action="../../../Proyecto/Macuin_Dashboards/CONTROLADOR/Loginform.php" method="POST" class="formulario_login">
                   <h2>Iniciar Sesión</h2>
-                  <input type="text" placeholder="Usuario" name = "usuario">
+                  <input type="text" placeholder="Correo" name = "Correo">
                   <input type="password" placeholder="Contraseña" name = "Password">
                   <button>Ingresar</button>
                 </form>
-                <form action="../CONTROLADOR/Loginform.php" method="POST" class="formulario_registro">
+                <form action="" method="" class="formulario_registro">
                   <h2>Recuperar contraseña</h2>
-                  <input type="text" placeholder="Usuario" name = "usuario">
-                  <input type="text" placeholder="Correo Electronico" name = "correo">
+                  <input type="text" placeholder="Usuario" >
+                  <input type="text" placeholder="Correo Electronico" >
                  
                   
                   <button>Enviar</button>

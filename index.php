@@ -1,7 +1,20 @@
 <?php
 
-include '../Macuin_Dashboards/VISTAS/Cabecera.php';
+session_start();
+ if (!isset($_SESSION['usuario'])) {
+   echo '<script>
+   alert("Por favor inicia sesión");
+   window.location = "../CC/Vista/Login.php";
+   </script>';
+   session_destroy();
+   die();
+ } 
 
+  
+  include '../Macuin_Dashboards/VISTAS/Cabecera.php';
+  
+  
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
