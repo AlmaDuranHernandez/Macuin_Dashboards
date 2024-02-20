@@ -23,11 +23,18 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
   <main>
     <form id="eventForm" action="../CONTROLADOR/generar_ticket.php" method="POST">
       
-      <label for="eventDate">Fecha:</label>
-      <input type="date" id="eventDate" name="eventDate" required>
+    
 
       <label for="eventLocation">Clasificacion:</label>
-      <input type="text" id="eventLocation" name="eventLocation" required>
+  <input type="text" id="eventLocation" name="eventLocation" list="opciones" require>
+
+  <datalist id="opciones">
+    <option value="Falla de Office ">
+    <option value="Fallas en la red">
+    <option value="Errores de software">
+    <option value="Errores de Hardware">
+    <option value="Mantenientos Preventivos">
+  </datalist>
 
       <label for="eventDescription">Descripción:</label>
       <textarea id="eventDescription" name="eventDescription" rows="4" required></textarea>

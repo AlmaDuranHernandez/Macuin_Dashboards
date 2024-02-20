@@ -58,23 +58,23 @@ if ($sql->num_rows > 0) {
             <img class="profile-image" src="https://via.placeholder.com/150" alt="Profile Image">
             <div class="profile-details">
                 <form action="../CONTROLADOR/AdmUser.php" method="POST">
-                    <!-- Campo de nombre -->
+                   
                     <div class="form-group">
                         <label for="inputName"> Editar nombre:</label>
                         <input type="text" class="form-control" id="inputName" name="nombre" placeholder="Nombre" value="<?php echo $nombreUsuario; ?>">
                     </div>
-                    <!-- Campo de correo electrónico -->
+                 
                     <div class="form-group">
                         <label for="inputEmail">Editar correo electrónico:</label>
                         <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Correo electrónico" value="<?php echo $emailUsuario; ?>">
                     </div>
-                    <!-- Campo de contraseña -->
+                    
                     <div class="form-group">
                         <label for="inputPassword">Editar contraseña:</label>
                         <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Contraseña" value="<?php echo $contrasena; ?>">
                     </div>
                     <br>
-                    <!-- Botón para guardar cambios -->
+                   
                     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </form>
             </div>
