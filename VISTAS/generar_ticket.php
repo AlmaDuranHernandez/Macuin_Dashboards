@@ -21,6 +21,7 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
  
   <br><br><br><br><br>
   <main>
+    
     <form id="eventForm" action="../CONTROLADOR/generar_ticket.php" method="POST">
       
     
