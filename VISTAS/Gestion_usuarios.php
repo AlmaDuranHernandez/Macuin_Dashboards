@@ -13,13 +13,10 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
 
 
 ?>
-    <div class="box">
-    <label for="Tipo de usuario">Tipo de usuario:</label>
-    <select id="tipo de usuario">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-    </select>
-    <button>Agregar</button>
+   </head>
+<body>
+
+    
 
     <table>
         <tr>
@@ -39,27 +36,17 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
         </tr>
         <!-- Puedes agregar más filas con datos de usuarios aquí -->
     </table>
-</div>
-    
-    <div class="box">
-        <h3>Gestión de Usuarios</h3>
-        <div class="user-form">
-            <label for="idUsuario">Id Usuario:</label>
-            <input type="text" id="idUsuario" />
-            <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" />
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" />
-            <label for="departamento">Departamento:</label>
-            <select id="departamento">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-            </select>
-            <button>Agregar</button>
-        </div>
-    </div>
-    <table>
-        
-    </table>
+
+    <script>
+        function borrarUsuario(userId) {
+            // Implementa la lógica para borrar el usuario con el id proporcionado
+            console.log("Borrar usuario con ID: " + userId);
+        }
+
+        function editarUsuario(userId) {
+            // Implementa la lógica para editar el usuario con el id proporcionado
+            console.log("Editar usuario con ID: " + userId);
+        }
+    </script>
 </body>
 </html>
