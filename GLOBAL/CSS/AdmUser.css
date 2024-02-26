@@ -1,0 +1,77 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #FF8000, #6c4675, #8c8ad8, #96c6ec, #FF8000);
+    background-size: 160% 170%;
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+.input-box.separate {
+    margin-bottom: 30px; 
+}
+.titulo, h2{
+    width: 100vh;
+    position: absolute;
+    top: 20%;
+    left: 28%; 
+    color: #000000!important;
+    font-size: 3rem!important;
+     font-family: 'Raleway', sans-serif; 
+  }
+   
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.profile-details input[type="file"] {
+    display: none;
+}
+.profile-details label {
+    cursor: pointer;
+    color: #007bff;
+}
+btn{
+    background-color: #333;
+}
+  /* Estilos personalizados */
+  .profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.profile-details input[type="file"] {
+    display: none;
+}
+.profile-details label {
+    cursor: pointer;
+    color: #007bff;
+}
