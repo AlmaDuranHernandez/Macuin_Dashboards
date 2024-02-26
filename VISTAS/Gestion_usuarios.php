@@ -21,9 +21,9 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
         Contacto
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Opción 1</a>
-        <a class="dropdown-item" href="#">Opción 2</a>
-        <a class="dropdown-item" href="#">Opción 3</a>
+        <a class="dropdown-item" href="#">Cliente</a>
+        <a class="dropdown-item" href="#">Auxiliar de soporte</a>
+        <a class="dropdown-item" href="#">Jefe de soporte</a>
     </div>
 </div>
 
@@ -65,8 +65,8 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
         
         <!-- Pie de la ventana modal -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Registrarse</button>
+        <button type="button" class="" >Editar</button>
+          <button type="button" class="">Borrar</button>
         </div>
         
       </div>
