@@ -16,48 +16,35 @@ body {
     font-family: 'Raleway', sans-serif; 
 }
 
-header {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
-
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-form {
-    max-width: 70%; /* Cambiado a 70% */
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-collapse: collapse; /* Agregado */
-    float: left; /* Agregado */
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input, textarea, select {
-    width: 100%;
+th, td {
     padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
-
-button {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+tr:hover {background-color: #f5f5f5;}
+.delete-icon, .edit-icon {
+    width: 20px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
-}
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #555;
+  }

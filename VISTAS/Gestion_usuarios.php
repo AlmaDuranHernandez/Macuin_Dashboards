@@ -3,20 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../Proyecto/Macuin_Dashboards/GLOBAL/CSS/Gestion_usuarios.css">
-    <title>Gestion usuarios</title>
-    
-</head>
-<body>
+    <title>Registro Modal</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../../../Proyecto/Macuin_Dashboards/GLOBAL/CSS/generar Gestion_usuarios.css">
 <?php
 include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
 
 
 ?>
-   </head>
-<body>
+    <title>Gestion de usuarios</title>
+   
+    <p class="m-2">Información de contacto:</p>
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Contacto
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Opción 1</a>
+        <a class="dropdown-item" href="#">Opción 2</a>
+        <a class="dropdown-item" href="#">Opción 3</a>
+    </div>
+</div>
 
+<!-- Botón para abrir el modal de registro -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registroModal">
+    Registro
+</button>
+
+</div>
+  
+  <!-- Ventana Modal -->
+  <div class="modal fade" id="registroModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Encabezado de la ventana modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">Formulario de Registro</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Cuerpo de la ventana modal -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+          </form>
+        </div>
+        
+        <!-- Pie de la ventana modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Registrarse</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</head>
+<body>
+    <h1>Ticketly Dashboard</h1>
+    <h2>Bienvenido</h2>
     
+    <!-- Agrega tu formulario de usuarios aquí -->
 
     <table>
         <tr>
