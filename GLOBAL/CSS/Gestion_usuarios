@@ -1,63 +1,79 @@
 body {
     background: linear-gradient(45deg, #6c4675, #8c8ad8, #96c6ec, #fff);
-    font-family: 'Arial', sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: #f4f4f4;
 }
 
-.titulo, h2 {
-    width: 100%;
+.TITULO, h2{
+    width: 100vh;
     position: absolute;
     top: 20%;
-    left: 24%; 
+    left: 23%; 
     color: #000000!important;
     font-size: 3rem!important;
-    font-family: 'Raleway', sans-serif; 
-}
+     font-family: 'Raleway', sans-serif; 
+  }
 
 header {
     background-color: #333;
+    color: #fff;
     padding: 10px;
     text-align: center;
+    font-family: "Raleway", sans-serif;
+    
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0%;
+}
+
+td {
+    text-align: center;
+}
+
+
+.delete-btn i {
+    font-size: 24px; 
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
     color: #fff;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-form {
-    max-width: 70%; /* Cambiado a 70% */
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-collapse: collapse; /* Agregado */
-    float: left; /* Agregado */
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input, textarea, select {
-    width: 100%;
+.btn {
+    display: inline-block;
     padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-button {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 5px;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.edit-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.btn:hover {
     background-color: #45a049;
 }

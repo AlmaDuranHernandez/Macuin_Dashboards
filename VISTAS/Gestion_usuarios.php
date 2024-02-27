@@ -18,7 +18,7 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
 
 
     <title>Gestion de usuarios</title>
-   
+    <h1>Gestion de Usuario</h1>
     <p class="m-2">Información de contacto:</p>
     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Contacto
@@ -78,7 +78,7 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
   
 </head>
 <body>
-    <h1>Gestion de Usuario</h1>
+   
     <h2>Bienvenido</h2>
     
     <!-- Agrega tu formulario de usuarios aquí -->
