@@ -80,7 +80,7 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
 
 <body>
    
-    <h2>Bienvenido</h2>
+ 
     
     <!-- Agrega tu formulario de usuarios aquí -->
 
