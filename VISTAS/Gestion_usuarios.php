@@ -69,8 +69,8 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
         
         <!-- Pie de la ventana modal -->
         <div class="modal-footer">
-        <button type="button" class="" >Editar</button>
-          <button type="button" class="">Borrar</button>
+        <button type="button" class="" >Cancelar</button>
+          <button type="button" class="">Guardar</button>
         </div>
         
       </div>
@@ -88,16 +88,62 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
         <tr>
             <th>Id </th>
             <th>Usuario</th>
+            <th>Contraseña</th>
             <th>Departamento</th>
             <th></th>
         </tr>
         <tr>
             <td>1</td>
             <td>********</td>
+            <td>********</td>
             <td>Departamento A</td>
             <td>
             <button type="button"  >Editar</button>
-                    <button type="button">Registrarse</button>
+                    <!-- Botón para abrir el modal de registro -->
+           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#edicionModal">
+            Editar
+        </button>
+
+<!-- Ventana Modal -->
+<div class="modal fade" id="edicionmodal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        
+            <!-- Encabezado de la ventana modal -->
+            <div class="modal-header">
+                <h4 class="modal-title">Formulario de Registro</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Cuerpo de la ventana modal -->
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" class="form-control" id="usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" class="form-control" id="contraseña">
+                    </div>
+                    <div class="form-group">
+                        <label for="Departamento">Departamento:</label>
+                        <input type="text" class="form-control" id="Departamento">
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Pie de la ventana modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+            </td>
             </td>
         </tr>
         <!-- Puedes agregar más filas con datos de usuarios aquí -->
