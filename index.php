@@ -74,7 +74,19 @@ session_start();
             </div>
         </div>
     </div>
-
+    <div class="col-6">
+        <div class="card"> 
+            <div class="card-body">
+                <h3>Gestion Usuarios</h3>
+                <img src="../Macuin_Dashboards/GLOBAL/PHOTO/3524752.png" alt="">
+                <div class="button-container">
+                <button type="button" class="btn btn-primary">
+                 <a href="../Macuin_Dashboards/VISTAS/Gestion_usuarios.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
             
