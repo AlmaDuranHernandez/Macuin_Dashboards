@@ -96,7 +96,7 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
             <td>********</td>
             <td>Departamento A</td>
             <td>
-            <button type="button"  >Cerrar</button>
+            <button type="button"  >Editar</button>
                     <button type="button">Registrarse</button>
             </td>
         </tr>
