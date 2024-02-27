@@ -90,7 +90,7 @@ session_start();
     <div class="col-6">
         <div class="card"> 
             <div class="card-body">
-                <h3>Gestion Usuarios</h3>
+                <h3>Jefe de soporte</h3>
                 <img src="../Macuin_Dashboards/GLOBAL/PHOTO/675523.png" alt="">
                 <div class="button-container">
                 <button type="button" class="btn btn-primary">
