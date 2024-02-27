@@ -25,12 +25,9 @@ session_start();
     <link rel="stylesheet" href="../Macuin_Dashboards/GLOBAL/CSS/index.css">
 </head>
 <body>
-   <br><br><br>
+ 
 
-   <header>
-        <h1>BIENVENIDO</h1>
-    </header>
-       
+   
             
  
     <div class="row  row-gap-3">
