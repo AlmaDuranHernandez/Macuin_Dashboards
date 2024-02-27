@@ -99,16 +99,19 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
             <td>Departamento A</td>
             <td>
             <button type="button"  >Editar</button>
-                    <!-- Botón para abrir el modal de registro -->
+            <button type="button"  >Eliminar</button>
+
+            <!-- Botón para abrir el modal de registro -->
            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#edicionModal">
             Editar
+            
         </button>
 
-<!-- Ventana Modal -->
-<div class="modal fade" id="edicionmodal">
+
+        <!-- Ventana Modal -->
+<div class="modal fade" id="edicionModal">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-        
             <!-- Encabezado de la ventana modal -->
             <div class="modal-header">
                 <h4 class="modal-title">Formulario de Registro</h4>
