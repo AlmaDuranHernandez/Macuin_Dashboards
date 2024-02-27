@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="../../../Proyecto/Macuin_Dashboards/GLOBAL/CSS/generar Gestion_usuarios.css">
 <?php
 include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
-
-
 ?>
     <title>Gestion de usuarios</title>
    
@@ -82,10 +80,10 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
 
     <table>
         <tr>
-            <th>Id Usuario</th>
-            <th>Contraseña</th>
+            <th>Id </th>
+            <th>Usuario</th>
             <th>Departamento</th>
-            <th>Acciones</th>
+            <th></th>
         </tr>
         <tr>
             <td>1</td>
