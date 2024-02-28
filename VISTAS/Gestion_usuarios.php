@@ -99,7 +99,7 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
             <td>Departamento A</td>
             <td>
             <button type="button"  >Editar</button>
-            <button type="button"  >Eliminar</button>
+           
 
             <!-- Botón para abrir el modal de registro -->
            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#edicionModal">
