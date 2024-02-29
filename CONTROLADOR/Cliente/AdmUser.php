@@ -2,8 +2,8 @@
 // Incluir archivo de conexión a la base de datos
 
 session_start();
-include '../MODELO/Conexion.php';
-include '../VISTAS/Cabecera.php';
+include '../../MODELO/Conexion.php';
+include '../../VISTAS/General/Cabecera.php';
 $email = $_SESSION['usuario'];
 
 $sql = $conn->query("SELECT usuario_id FROM usuario WHERE email='$email'");

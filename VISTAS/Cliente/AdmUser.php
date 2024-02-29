@@ -9,8 +9,8 @@ if (!isset($_SESSION['usuario'])) {
   die();
 } 
 
-include '../MODELO/Conexion.php';
-include '../VISTAS/Cabecera.php';
+include '../../MODELO/Conexion.php';
+include '../../VISTAS/General/';
 $email = $_SESSION['usuario'];
 
 $sql = $conn->query("SELECT usuario_id, nombre, email, pass FROM usuario WHERE email='$email'");
@@ -34,7 +34,7 @@ if ($sql->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
-    <link rel="stylesheet" href="../GLOBAL/CSS/AdmUser.css">
+    <link rel="stylesheet" href="../../GLOBAL/CSS/AdmUser.css">
 </head>
 <body>
 

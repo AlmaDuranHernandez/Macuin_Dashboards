@@ -1,17 +1,17 @@
 
 <?php
 
-include '../MODELO/Conexion.php';
-include '../VISTAS/Cabecera.php';
+include '../../MODELO/Conexion.php';
+include '../../VISTAS/General/Cabecera.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
-        $fecha = $_POST["eventDate"];
+
         $clasificacion = $_POST["eventLocation"];
         $descripcion = $_POST["eventDescription"];
     
     
-        $sql = "INSERT INTO tickets (fecha, clasificacion, descripcion) VALUES ('$fecha', '$clasificacion', '$descripcion')";
+        $sql = "INSERT INTO tickets (fecha, clasificacion, descripcion) VALUES (NOW(), '$clasificacion', '$descripcion')";
     
        
         if ($conn->query($sql) === TRUE) {

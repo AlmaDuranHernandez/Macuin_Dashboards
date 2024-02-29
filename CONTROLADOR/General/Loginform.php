@@ -10,7 +10,7 @@
 
 session_start();
 
-include '../MODELO/Conexion.php';
+include '../../MODELO/Conexion.php';
 
 
 
@@ -23,11 +23,22 @@ and pass='$Password'");
 
 if(mysqli_num_rows($Validar_Login) > 0){
     $_SESSION['usuario'] = $email;
-    $_SESSION['nombre'] = $nombre;
-    header("location: ../index.php");
-    exit();
     
+
+    if($rol['id_rol']==1){
+        header("location: ../index.php");
+        exit();
+    }else{
+        if($Validar_Login['id_rol']==2){
+        header("location: ../index.php");
+        exit();
+    }else{
+        if($Validar_Login['id_rol']==1){
+            header("location: ../index.php");
+            exit();
+    }  }   }
 }else{
+    
     echo
     "<script>
     swal('Error','Los datos ingresados son incorrectos','error').then(function() {
