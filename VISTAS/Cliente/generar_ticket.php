@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recolección de Eventos</title>
-  <link rel="stylesheet" href="../../../Proyecto/Macuin_Dashboards/GLOBAL/CSS/generar ticket.css">
+  <link rel="stylesheet" href="../../GLOBAL/CSS/generar ticket.css">
 </head>
 <body>
 
 <?php
-include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
+include '../../VISTAS/General/Cabecera.php';
 
 
 ?>
@@ -19,10 +19,10 @@ include '../../Macuin_Dashboards/VISTAS/Cabecera.php';
   </header>
  <div class="titulo"><h2>GENERAR TICKET</h2></div>
  
-  <br><br><br><br><br>
+  
   <main>
     
-    <form id="eventForm" action="../CONTROLADOR/generar_ticket.php" method="POST">
+    <form id="eventForm" action="../../CONTROLADOR/Cliente/generar_ticket.php" method="POST">
       
     
 

@@ -1,14 +1,14 @@
 <?php
 session_start();
-include '../MODELO/Conexion.php';
-include '../VISTAS/Cabecera.php';
-include '../CONTROLADOR/AdmUser.php';
+include '../../MODELO/Conexion.php';
+include '../../VISTAS/General/Cabecera.php';
+include '../../CONTROLADOR/Cliente/AdmUser.php';
 
 
 ?>
 
 
-    <link rel="stylesheet" href="../GLOBAL/CSS/Cliente.css">
+    <link rel="stylesheet" href="../../GLOBAL/CSS/Cliente.css">
 </head>
 <body>
 

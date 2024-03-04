@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LOGIN</title>
-        <link rel="stylesheet" href="../GLOBAL/CSS/login.css">
+        <link rel="stylesheet" href="../../GLOBAL/CSS/login.css">
   </head>
   <body>
 
@@ -30,7 +30,7 @@
 
               <div class="contenedor_login_registro">
 
-                <form action="../../../Proyecto/Macuin_Dashboards/CONTROLADOR/Loginform.php" method="POST" class="formulario_login">
+                <form action="../../../../Proyecto/Macuin_Dashboards/CONTROLADOR/General/Loginform.php" method="POST" class="formulario_login">
                   <h2>Iniciar Sesión</h2>
                   <input type="text" placeholder="Correo" name = "Correo">
                   <input type="password" placeholder="Contraseña" name = "Password">
@@ -47,6 +47,6 @@
               </div>
          </div>
       </main>
-      <script src="../GLOBAL/JS/login.js"></script>
+      <script src="../../GLOBAL/JS/login.js"></script>
   </body>
 </html>

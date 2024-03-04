@@ -4,14 +4,30 @@
 include '../../MODELO/Conexion.php';
 include '../../VISTAS/General/Cabecera.php';
 
+session_start();
+include '../../MODELO/Conexion.php';
+include '../../VISTAS/General/Cabecera.php';
+$email = $_SESSION['usuario'];
+
+$sql = $conn->query("SELECT usuario_id FROM usuario WHERE email='$email'");
+if ($sql->num_rows > 0) {
+    $usuario = $sql->fetch_assoc();
+    $ID = $usuario['usuario_id'];
+
+   
+} else {
+    
+    echo "Error al actualizar datos: " . $conn->error;
+}
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
 
         $clasificacion = $_POST["eventLocation"];
         $descripcion = $_POST["eventDescription"];
+        $ID = $usuario['usuario_id'];
     
-    
-        $sql = "INSERT INTO tickets (fecha, clasificacion, descripcion) VALUES (NOW(), '$clasificacion', '$descripcion')";
+        $sql = "INSERT INTO tickets (usuario_id, fecha, clasificacion, descripcion) VALUES ('$ID', NOW(), '$clasificacion', '$descripcion')";
     
        
         if ($conn->query($sql) === TRUE) {

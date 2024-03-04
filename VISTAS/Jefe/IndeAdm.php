@@ -32,47 +32,34 @@ session_start();
  
     <div class="row  row-gap-3">
     <div class="row justify-content-center row-gap-3">
+    
     <div class="col-6">
         <div class="card"> 
             <div class="card-body">
-                <h3>GENERAR TICKET</h3>
-                <img src="../../GLOBAL/PHOTO/675523.png" alt="">
-                <div class="button-container">
-                <button type="button" class="btn btn-primary">
-                 <a href="../../VISTAS/Cliente/generar_ticket.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
-                </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="card"> 
-            <div class="card-body">
-                <h3>TIKETS SOLICITADOS</h3>
-                <img src="../..//GLOBAL/PHOTO/2593342.png" alt="">
-                <div class="button-container">
-                <button type="button" class="btn btn-primary">
-                 <a href="../../VISTAS/Cliente/Cliente.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
-                </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="card"> 
-            <div class="card-body">
-                <h3>ADMINISTRAR PERFIL</h3>
+                <h3>Gestion Usuarios</h3>
                 <img src="../../GLOBAL/PHOTO/3524752.png" alt="">
                 <div class="button-container">
                 <button type="button" class="btn btn-primary">
-                 <a href="../Macuin_Dashboards/VISTAS/AdmUser.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
+                 <a href="../Macuin_Dashboards/VISTAS/Gestion_usuarios.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
                 </button>
                 </div>
             </div>
         </div>
     </div>
-   
-    
+    <div class="col-6">
+        <div class="card"> 
+            <div class="card-body">
+                <h3>Jefe de soporte</h3>
+                <img src="../../GLOBAL/PHOTO/675523.png" alt="">
+                <div class="button-container">
+                <button type="button" class="btn btn-primary">
+                 <a href="../Macuin_Dashboards/VISTAS/Jefe_Soporte.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </div>
             
   
