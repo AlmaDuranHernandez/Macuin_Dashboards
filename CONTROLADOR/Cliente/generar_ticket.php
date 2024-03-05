@@ -1,8 +1,6 @@
 
 <?php
 
-include '../../MODELO/Conexion.php';
-include '../../VISTAS/General/Cabecera.php';
 
 session_start();
 include '../../MODELO/Conexion.php';

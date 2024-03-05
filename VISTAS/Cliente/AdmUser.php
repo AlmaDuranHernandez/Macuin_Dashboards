@@ -10,7 +10,7 @@ if (!isset($_SESSION['usuario'])) {
 } 
 
 include '../../MODELO/Conexion.php';
-include '../../VISTAS/General/';
+include '../../VISTAS/General/Cabecera.php';
 $email = $_SESSION['usuario'];
 
 $sql = $conn->query("SELECT usuario_id, nombre, email, pass FROM usuario WHERE email='$email'");

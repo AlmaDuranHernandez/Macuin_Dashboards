@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include '../../MODELO/Conexion.php';
 include '../../VISTAS/General/Cabecera.php';
 include '../../CONTROLADOR/Cliente/AdmUser.php';

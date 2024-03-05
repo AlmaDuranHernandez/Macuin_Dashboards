@@ -1,5 +1,5 @@
 <?php
-// Incluir archivo de conexión a la base de datos
+
 
 session_start();
 include '../../MODELO/Conexion.php';
