@@ -8,6 +8,7 @@ include '../../VISTAS/General/Cabecera.php';
 
 $email = $_SESSION['usuario'];
 
+
 $sql = $conn->query("SELECT usuario_id FROM usuario WHERE email='$email'");
 if ($sql->num_rows > 0) {
     $usuario = $sql->fetch_assoc();

@@ -40,7 +40,7 @@ session_start();
                 <img src="../../GLOBAL/PHOTO/3524752.png" alt="">
                 <div class="button-container">
                 <button type="button" class="btn btn-primary">
-                 <a href="../Macuin_Dashboards/VISTAS/Gestion_usuarios.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
+                 <a href="../Jefe/Gestion_usuarios.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
                 </button>
                 </div>
             </div>
@@ -53,7 +53,7 @@ session_start();
                 <img src="../../GLOBAL/PHOTO/675523.png" alt="">
                 <div class="button-container">
                 <button type="button" class="btn btn-primary">
-                 <a href="../Macuin_Dashboards/VISTAS/Jefe_Soporte.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
+                 <a href="../Macuin_Dashboards/VISTAS/Jefe/Jefe_Soporte.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
                 </button>
                 </div>
             </div>
