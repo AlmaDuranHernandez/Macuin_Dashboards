@@ -1,32 +1,14 @@
+
 body {
     background: linear-gradient(45deg, #6c4675, #8c8ad8, #96c6ec, #fff);
-    font-family: "Raleway", sans-serif;
+    font-family: "Raleway";
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
-
-.TITULO, h2{
-    width: 100vh;
-    position: absolute;
-    top: 20%;
-    left: 23%; 
-    color: #000000!important;
-    font-size: 3rem!important;
-     font-family: 'Raleway', sans-serif; 
-  }
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-family: "Raleway", sans-serif;
-    
-}
-
 table {
-    width: 80%;
+    width: 80%; 
+    max-width: 800px; 
     margin: 20px auto;
     border-collapse: collapse;
     background-color: #fff;
@@ -34,24 +16,21 @@ table {
     border-radius: 0%;
 }
 
-td {
-    text-align: center;
-}
 
-
-.delete-btn i {
-    font-size: 24px; 
-}
-th, td {
+td, th {
+    text-align: center; /* Centrar el contenido en las celdas */
     padding: 15px;
-    text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-th {
-    background-color: #333;
-    color: #fff;
-}
+th, thead {
+        background-color: #000000!important; /* Cambia el color de fondo a negro */
+        color: #ffffff!important; /* Cambia el color del texto a blanco */
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+   
 
 .btn {
     display: inline-block;
@@ -65,7 +44,7 @@ th {
 }
 
 .edit-btn {
-    background-color: #4caf50;
+    background-color: #000000;
     color: #fff;
 }
 
@@ -75,5 +54,9 @@ th {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #050505;
+}
+.TITLE {
+    text-align: center; /* Centrar el texto */
+    margin-top: 120px; /* Esto asegura que el texto aparezca debajo del navbar */
 }

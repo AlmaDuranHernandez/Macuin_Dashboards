@@ -49,7 +49,7 @@ if ($sql->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
-    <link rel="stylesheet" href="../GLOBAL/CSS/AdmUser.css">
+    <link rel="stylesheet" href="../../GLOBAL/CSS/AdmUser.css">
 </head>
 <body>
     <br><br><br><br><br><br>
@@ -57,7 +57,7 @@ if ($sql->num_rows > 0) {
         <div class="profile-card">
             <img class="profile-image" src="https://via.placeholder.com/150" alt="Profile Image">
             <div class="profile-details">
-                <form action="../CONTROLADOR/AdmUser.php" method="POST">
+                <form action="../../CONTROLADOR/Cliente/AdmUser.php" method="POST">
                    
                     <div class="form-group">
                         <label for="inputName"> Editar nombre:</label>
