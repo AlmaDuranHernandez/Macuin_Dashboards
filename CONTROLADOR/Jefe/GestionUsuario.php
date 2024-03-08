@@ -1,37 +1,4 @@
 <!-- Agrega tu formulario de usuarios aquí -->
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Email</th>
-            <th>Rol</th>
-            <th>Departamento</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        // Consulta para obtener los usuarios desde la base de datos
-        $sql = "SELECT u.usuario_id, u.nombre, u.email, r.Descripcion as rol, d.departamento FROM usuario u 
-                INNER JOIN roles r ON u.id_rol = r.id INNER JOIN departamentos d ON u.id_departamento = d.id";
-        $result = $conn->query($sql);
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . $row['usuario_id'] . "</td>";
-            echo "<td>" . $row['nombre'] . "</td>";
-            echo "<td>" . $row['email'] . "</td>";
-            echo "<td>" . $row['rol'] . "</td>";
-            echo "<td>" . $row['departamento'] . "</td>";
-            echo "<td>";
-            echo "<button class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#staticBackdrop" . $row['usuario_id'] . "'>Editar</button>";
-            echo "<button class='btn btn-danger ml-2' onclick='abrirModalEliminar(" . $row['usuario_id'] . ")'>Eliminar</button>";
-            echo "</td>";
-            echo "</tr>";
-        }
-        ?>
-    </tbody>
-</table>
 
 <!-- Ventana Modal para Editar -->
 <div class="modal fade" id="editarModal">
