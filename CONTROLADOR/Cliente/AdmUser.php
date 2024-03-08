@@ -4,6 +4,7 @@
 session_start();
 include '../../MODELO/Conexion.php';
 include '../../VISTAS/General/Cabecera.php';
+
 $email = $_SESSION['usuario'];
 
 $sql = $conn->query("SELECT usuario_id FROM usuario WHERE email='$email'");
@@ -38,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             timer: 3000, // El mensaje se mostrará durante 3 segundos
             button: false // No mostrará ningún botón para cerrar el mensaje
         }).then(function() {
-            window.location.href = '../VISTAS/AdmUser.php'; // Redirecciona a la página de inicio
+            window.location.href = '../../VISTAS/Cliente/AdmUser.php'; // Redirecciona a la página de inicio
         });
     </script>";  
     } else {

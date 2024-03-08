@@ -21,10 +21,15 @@ body{
 
 
 /*NAV---------------------------------------------------------------------------------------------------------------------------------------------*/
+
 .navbar{
-    background-color: white !important;
-    --bs-navbar-color: #46a2fd !important; 
-    height: 70px !important;
+ 
+        background-color: white !important;
+        --bs-navbar-color: #46a2fd !important; 
+        height: 70px !important;
+        border-bottom: 5px solid black; 
+        height: 90px !important; 
+
 }
 .navbar-nav {
     margin-top: 100px;

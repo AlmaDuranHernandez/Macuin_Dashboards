@@ -5,6 +5,7 @@
 session_start();
 include '../../MODELO/Conexion.php';
 include '../../VISTAS/General/Cabecera.php';
+
 $email = $_SESSION['usuario'];
 
 
@@ -38,7 +39,7 @@ if ($sql->num_rows > 0) {
                 timer: 3000, 
                 button: false 
             }).then(function() {
-                window.location.href = '../VISTAS/generar_ticket.php'; // Redirecciona a la página de inicio
+                window.location.href = '../../VISTAS/Cliente/generar_ticket.php'; // Redirecciona a la página de inicio
             });
         </script>";  
         } else {
