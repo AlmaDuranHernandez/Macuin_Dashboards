@@ -15,13 +15,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../GLOBAL/CSS/Jefe_sop.css">
-    <link rel="stylesheet" href="../../GLOBAL/CSS/Cabecera.css">
 </head>
-<body style="margin-top: 100px;"> 
+<body style="margin-top: 100px;> 
     <?php include '../../VISTAS/General/Cabecera.php'; ?>
 
+
     <div class="container mt-5">
-        <h1>Departamentos</h1>
+    <h1>Departamentos</h1>
+
+    <!-- Resto de tu contenido HTML -->
+</div>
+
+
         <!-- Ventana Modal -->
         <div class="modal fade" id="registroModal">
             <div class="modal-dialog modal-dialog-centered">
@@ -143,5 +148,10 @@
             });
         });
     </script>
+
+
+        });
+    </script>
 </body>
 </html>
+
