@@ -1,9 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(45deg,   #FF8000, #6c4675, #8c8ad8, #96c6ec, #fff);
-    background-size: 160% 170%;
-    background-position: center center; 
-    background-repeat: no-repeat; 
+   
 }
 
 header {
