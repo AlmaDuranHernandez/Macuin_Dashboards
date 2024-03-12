@@ -15,7 +15,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../GLOBAL/CSS/Jefe_sop.css">
-    <link rel="stylesheet" href="../../GLOBAL/CSS/Cabecera.css">
 </head>
 <body style="margin-top: 100px;> 
     <?php include '../../VISTAS/General/Cabecera.php'; ?>
