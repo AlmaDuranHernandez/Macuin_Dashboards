@@ -24,7 +24,7 @@ session_start();
     <title>Tickets</title>
     <link rel="stylesheet" href="../../GLOBAL/CSS/index.css">
 </head>
-<body>
+
  
 
    
@@ -50,10 +50,10 @@ session_start();
         <div class="card"> 
             <div class="card-body">
                 <h3>Reportes</h3>
-                <img src="../../GLOBAL/PHOTO/675523.png" alt="">
+                <img src="../../GLOBAL/PHOTO/3524752.png" alt="">
                 <div class="button-container">
                 <button type="button" class="btn btn-primary">
-                 <a href="../../VISTAS/Jefe/Generar_reportes.php" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
+                 <a href="../../CONTROLADOR/Jefe/" style="color: inherit; text-decoration: none;"> Acceder <i class="bi bi-hand-index"></i></a>
                 </button>
                 </div>
             </div>
@@ -88,6 +88,5 @@ session_start();
     </div>
             
   
-   
-</body>
+
 </html>
