@@ -77,9 +77,9 @@
                         <td><?php echo $departamento['departamento']; ?></td>
                         <td>
                             <!-- Botón de editar -->
-                            <button type="button" class="btn btn-primary editar-btn" data-toggle="modal" data-target="#editardepartamento" data-id="<?php echo $departamento['id']; ?>">Editar</button>
+                            <button type="button" class="btn btn-primary editar-btn" data-toggle="modal" data-target="#editardepartamento" data-id="<?php echo $departamento['id']; ?>"><i class="bi bi-pencil"></i></button>
                             <!-- Botón de borrar -->
-                            <button type="button" class="btn btn-danger borrar-btn" data-toggle="modal" data-target="#ModalBorrar" data-id="<?php echo $departamento['id']; ?>">Borrar</button>
+                            <button type="button" class="btn btn-danger borrar-btn" data-toggle="modal" data-target="#ModalBorrar" data-id="<?php echo $departamento['id']; ?>"><i class="bi bi-trash3"></i></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>

@@ -2,6 +2,7 @@
     // Incluir la conexión a la base de datos
     include '../../MODELO/Conexion.php';
     include '../../CONTROLADOR/Jefe/Ticket/Consulta_Ticket.php';
+    include '../../VISTAS/General/Cabecera.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,10 +17,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../GLOBAL/CSS/Jefe_sop.css">
 </head>
-<body style="margin-top: 200px;"> 
-    <?php include '../../VISTAS/General/Cabecera.php'; ?>
-
+<body> 
+   
     <div class="container">
+
         <h1>Gestión de Tickets</h1>
         <!-- Tabla de tickets -->
         <table class="table">
@@ -43,9 +44,10 @@
                         <td><?php echo obtenerNombreAuxiliar($ticket['id_auxiliar']); ?></td>
                         <td>
                             <!-- Botón de editar -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#añadirAuxiliarModal" data-ticketid="<?php echo $ticket['ticket_id']; ?>">Editar</button>
-
-                            <button type="button" class="btn btn-danger">Eliminar</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#añadirAuxiliarModal" data-ticketid="<?php echo $ticket['ticket_id']; ?>"><i class="bi bi-person-plus-fill"></i></button>
+                            
+                            <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                            <button type="button" class="btn btn-danger"><i class="bi bi-envelope-fill"></i></button>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -85,6 +87,7 @@
                 ?>
             </select>
         </div>
+        <button onclick="imprimirUsuarioId()">Imprimir Usuario ID</button>
         <!-- Campo oculto para almacenar el id_auxiliar seleccionado -->
         <input type="hidden" id="id_auxiliar_input" name="id_auxiliar" value="">
         <button type="submit" class="btn btn-primary" name="guardar_cambios" onclick="imprimirUsuarioId()">Añadir Auxiliar</button>
@@ -99,6 +102,9 @@
         console.log('Usuario ID seleccionado:', usuarioIdSeleccionado);
     }
 </script>
+
+<br><br><br><br><br>
+
 
 </body>
 </html>

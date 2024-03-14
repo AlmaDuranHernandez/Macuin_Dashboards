@@ -1,6 +1,6 @@
 <?php
     // Incluir la conexión a la base de datos
-    include '../../MODELO/Conexion.php';
+    include '../../../MODELO/Conexion.php';
 
     
 
