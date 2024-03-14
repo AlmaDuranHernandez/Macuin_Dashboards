@@ -1,5 +1,17 @@
 <?php
-include '../../VISTAS/General/Cabecera copy.php';
+session_start();
+if (!isset($_SESSION['usuario'])) {
+  echo '<script>
+  alert("Por favor inicia sesión");
+  window.location = "../CC/Vista/Login.php";
+  </script>';
+  session_destroy();
+  die();
+} 
+
+ 
+ include '../../VISTAS/General/Cabecera.php';
+include '../../VISTAS/General/CabeceraJefe.php';
 include '../../MODELO/Conexion.php';
 
 ?>

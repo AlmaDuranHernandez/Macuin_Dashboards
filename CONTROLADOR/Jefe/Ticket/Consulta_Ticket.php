@@ -1,10 +1,10 @@
 <?php
     // Incluir la conexión a la base de datos
-    include '../../../MODELO/Conexion.php';
+    include('C:\xampp\htdocs\Proyecto\Macuin_Dashboards\MODELO\Conexion.php');
 
     
 
-
+   
     // Obtener los tickets de la base de datos
     $sql = "SELECT * FROM tickets";
     $resultado = $conn->query($sql);

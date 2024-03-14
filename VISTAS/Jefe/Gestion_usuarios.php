@@ -1,17 +1,25 @@
 <?php
-include '../../VISTAS/General/Cabecera copy.php';
+session_start();
+if (!isset($_SESSION['usuario'])) {
+  echo '<script>
+  alert("Por favor inicia sesión");
+  window.location = "";
+  </script>';
+  session_destroy();
+  die();
+} 
+
 include '../../MODELO/Conexion.php';
+include '../../VISTAS/General/CabeceraJefe.php';
+
+
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-    <!-- Agrega los siguientes enlaces para incluir Bootstrap y jQuery -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
+   
     <link rel="stylesheet" href="../../GLOBAL/CSS/Gestion_usuarios.css">
 </head>
 <body> 
