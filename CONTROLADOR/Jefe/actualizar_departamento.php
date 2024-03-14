@@ -1,7 +1,7 @@
 <?php
-
+session_start();
 include '../../MODELO/Conexion.php';
-include '../../VISTAS/General/CabeceraJefe.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["nuevo_nombre"]) && isset($_POST["departamento_id"])) {
         try {
@@ -25,11 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt_check->close();
 
             if ($count > 0) {
-                echo "<script>
-                swal('Error','El departamento ya existe en el sistema','error').then(function() {
-                    window.location =  '../../VISTAS/Jefe/Gestion_departamento.php';
-                });
-            </script>"; 
+                $_SESSION['error_message'] = "Ya existe un departamento con el mismo nombre.";
+                header("Location: ../../VISTAS/Jefe/Gestion_Departamento.php");
+                exit();
             }
 
             // Preparar y ejecutar la consulta para actualizar el nombre del departamento
@@ -45,28 +43,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt_update->close();
 
             // Redireccionar a la página de departamentos después de la actualización
-            echo "<script> 
-                    swal({
-                        title: 'HECHO',
-                        text: 'El departamneto fue actualizado correctamente',
-                        icon: 'success',
-                        timer: 2000, // El mensaje se mostrará durante 3 segundos
-                        button: false // No mostrará ningún botón para cerrar el mensaje
-                    }).then(function() {
-                        window.location.href = '../../VISTAS/Jefe/Gestion_departamento.php'; // Redirecciona a la página de inicio
-                    });
-                </script>";  
+            $_SESSION['success_message'] = "Departamento actualizado correctamente.";
+            header("Location: ../../VISTAS/Jefe/Gestion_Departamento.php");
+            exit();
         } catch (Exception $e) {
             $_SESSION['error_message'] = $e->getMessage();
             header("Location: ../../VISTAS/Jefe/Gestion_Departamento.php");
             exit();
         }
     } else {
-        echo "<script>
-        swal('Error','Los datso estan incompletas, revisa porfavor','error').then(function() {
-            window.location =  '../../VISTAS/Jefe/Gestion_departamento.php';
-        });
-    </script>"; 
+        $_SESSION['error_message'] = "Datos incompletos para la actualización del departamento.";
+        header("Location: ../../VISTAS/Jefe/Gestion_Departamento.php");
         exit();
     }
 }
