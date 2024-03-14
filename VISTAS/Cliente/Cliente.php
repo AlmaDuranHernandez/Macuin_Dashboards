@@ -35,7 +35,7 @@ if ($sql->num_rows > 0) {
 
     
      <div class="TITLE">
-        <h1>REPORTES GENERADOS</h1>
+        <h1>Tickets Solicitados</h1>
      </div>
       <br><br>
         <table class="table">

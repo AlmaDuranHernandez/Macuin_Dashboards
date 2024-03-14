@@ -32,7 +32,7 @@
                 <a class="nav-link active" href="../../CC/Vista/mostrarcarrito.php"><span class="sr-only ">Notificaciones  (<?php echo (empty($_SESSION['CARRITO'])) ? 0 : count($_SESSION['CARRITO']); ?>)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="../../../Proyecto/Macuin_Dashboards/VISTAS/Login.php"><span class="sr-only ">Cerrar sesion </a>
+                <a class="nav-link active" href="../../VISTAS/General/Login.php"><span class="sr-only ">Cerrar sesion </a>
             </li>
         </ul>
     </div>

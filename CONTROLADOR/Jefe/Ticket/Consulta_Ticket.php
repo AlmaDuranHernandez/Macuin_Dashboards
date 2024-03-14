@@ -1,10 +1,9 @@
 <?php
+// Manejo de excepciones para la conexión a la base de datos
+try {
     // Incluir la conexión a la base de datos
     include('C:\xampp\htdocs\Proyecto\Macuin_Dashboards\MODELO\Conexion.php');
 
-    
-
-   
     // Obtener los tickets de la base de datos
     $sql = "SELECT * FROM tickets";
     $resultado = $conn->query($sql);
@@ -57,20 +56,20 @@
                 return "Sin auxiliar asignado";
             }
         } else {
-            // Si la preparación de la consulta falló, devolver un mensaje de error
-            return "Error en la preparación de la consulta";
+            // Si la preparación de la consulta falló, lanzar una excepción
+            throw new Exception("Error en la preparación de la consulta para obtener el nombre del auxiliar");
         }
     }
 
     // Función para buscar auxiliares
     function BuscarAuxiliares() {
         global $conn;
-    
+
         $sql = "SELECT * FROM usuario WHERE id_rol = 2";
-    
+
         // Ejecutar la consulta
         $resultado = $conn->query($sql);
-    
+
         // Verificar si hay resultados
         if ($resultado && $resultado->num_rows > 0) {
             // Crear un array para almacenar los datos de los auxiliares
@@ -81,8 +80,12 @@
             }
             return $auxiliares;
         } else {
-            // Si no hay resultados, retornar un array vacío
-            return array();
+            // Si no hay resultados, lanzar una excepción
+            throw new Exception("No se encontraron auxiliares");
         }
     }
+} catch (Exception $e) {
+    // Manejo de la excepción: mostrar mensaje de error o realizar otra acción
+    echo "Error: " . $e->getMessage();
+}
 ?>
