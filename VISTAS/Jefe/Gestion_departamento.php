@@ -142,11 +142,7 @@
                 $('#departamento_id').val(departamento_id);
             });
 
-            $('.borrar-btn').click(function() {
-                var departamento_id = $(this).data('id');
-                $('#confirmar-borrar').attr('href', '../../CONTROLADOR/Jefe/borrar_departamento.php?borrar_departamento=' + departamento_id);
-            });
-        });
+     
     </script>
 
 

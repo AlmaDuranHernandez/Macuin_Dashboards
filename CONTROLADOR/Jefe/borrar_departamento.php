@@ -19,14 +19,7 @@ if(isset($_GET['borrar_departamento'])) {
         $stmt->bind_param("i", $id_departamento);
         $stmt->execute();
 
-        // Verificar si se ha eliminado alguna fila
-        if ($stmt->affected_rows > 0) {
-            $success_message = "Departamento eliminado correctamente.";
-        } else {
-            $error_message = "No se ha podido borrar el departamento.";
-        }
-
-        // Cerrar la declaración
+      
         $stmt->close();
     } catch (mysqli_sql_exception $e) {
         // Capturar la excepción de la base de datos
@@ -35,14 +28,9 @@ if(isset($_GET['borrar_departamento'])) {
             $error_message = "No se puede borrar el departamento porque tiene tickets asociados.";
         } else {
             // Si hay otro tipo de error, mostrar un mensaje genérico
-            $error_message = "Error al intentar borrar el departamento.";
+            echo "NO SE PUDO BROTHER";
         }
     }
-
-    // Almacenar los mensajes en la sesión
-    $_SESSION['success_message'] = $success_message;
-    $_SESSION['error_message'] = $error_message;
-    $_SESSION['warning_message'] = $warning_message;
 
 } else {
     // Si no se ha especificado un departamento para borrar, establecer un mensaje de advertencia

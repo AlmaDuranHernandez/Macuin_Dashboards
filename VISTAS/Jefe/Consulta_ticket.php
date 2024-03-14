@@ -2,7 +2,7 @@
     // Incluir la conexión a la base de datos
     include '../../MODELO/Conexion.php';
     include '../../CONTROLADOR/Jefe/Ticket/Consulta_Ticket.php';
-?>
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,16 +64,19 @@
                     </button>
                 </div>
 
-                <div class="modal-body">
+     
+
+
+<div class="modal-body">
     <!-- Contenido del formulario de añadir auxiliar -->
-    <form id="añadirAuxiliarForm" method="POST" action="../../CONTROLADOR/Jefe/Ticket/Consulta_Ticket.php">
+    <form id="añadirAuxiliarForm" method="POST" action="">
         <div class="form-group">
             <label for="ticket_id">ID del Ticket:</label>
             <input type="text" id="ticket_id_modal" name="ticket_id_modal" value="">
         </div>
         <div class="form-group">
             <label for="auxiliar">Seleccionar Auxiliar:</label>
-            <select class="form-control" id="auxiliar" name="id_auxiliar">
+            <input class="form-control" id="auxiliar" name="id_auxiliar">
                 <option value="">Seleccionar Auxiliar</option>
                 <?php 
                     $auxiliares = BuscarAuxiliares(); // Obtener los auxiliares
@@ -85,13 +88,10 @@
                 ?>
             </select>
         </div>
-        <!-- Campo oculto para almacenar el id_auxiliar seleccionado -->
-        <input type="hidden" id="id_auxiliar_input" name="id_auxiliar" value="">
-        <button type="submit" class="btn btn-primary" name="guardar_cambios" onclick="imprimirUsuarioId()">Añadir Auxiliar</button>
+        <button type="submit" class="btn btn-primary" name="Añadir_Auxiliar" action="../../CONTROLADOR/Jefe/InsertarAuxiliar.php">Añadir Auxiliar</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
     </form>
 </div>
-
 <script>
     function imprimirUsuarioId() {
         var auxiliarSelect = document.getElementById("auxiliar");

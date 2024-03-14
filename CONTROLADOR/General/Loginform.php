@@ -49,7 +49,7 @@ if(mysqli_num_rows($Validar_Login) > 0){
 } else {
     echo "<script>
         swal('Error','Los datos ingresados son incorrectos','error').then(function() {
-            window.location =  '../VISTAS/Login.php';
+            window.location =  '../../VISTAS/General/Login.php';
         });
     </script>"; 
 }
