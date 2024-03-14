@@ -37,10 +37,17 @@
                     <td><?php echo obtenerNombreAuxiliar($ticket['id_auxiliar']); ?></td>
                     <td>
                         <!-- Formulario para enviar el ID del ticket al controlador -->
+                            <!-- Formulario para enviar el ID del ticket al controlador -->
                         <form id="formTicketId_<?php echo $ticket['ticket_id']; ?>" method="POST" action="../../CONTROLADOR/Jefe/AsignarAux.php">
-                            <input type="hidden" name="ticket_id" value="<?php echo $ticket['ticket_id']; ?>">
+                            <input type="hidden" name="ticket_id_modal" value="<?php echo $ticket['ticket_id']; ?>">
                             <button type="button" class="btn btn-primary abrir-modal" data-ticketid="<?php echo $ticket['ticket_id']; ?>" data-toggle="modal" data-target="#añadirAuxiliarModal"><i class="bi bi-person-plus-fill"></i></button>
                         </form>
+                        <form id="formEliminarTicket_<?php echo $ticket['ticket_id']; ?>" method="POST" action="../../CONTROLADOR/Jefe/Ticket/EliminarTicket.php">
+                             <input type="hidden" name="ticket_id_eliminar" value="<?php echo $ticket['ticket_id']; ?>">
+                             <button type="submit" class="btn btn-danger eliminar-ticket"><i class="bi bi-trash-fill"></i></button>
+                         </form>
+                         <button type="button" class="btn btn-primary abrir-modal-comentario" data-ticketid="<?php echo $ticket['ticket_id']; ?>" data-toggle="modal" data-target="#añadirComentarioModal"> <i class="bi bi-envelope"></i></button>
+                         
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -83,6 +90,50 @@
         </div>
     </div>
 </div>
+<!-- Agregar un botón para abrir el modal -->
+
+
+<!-- Modal para agregar comentario -->
+<div class="modal fade" id="añadirComentarioModal" tabindex="-1" role="dialog" aria-labelledby="añadirComentarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="añadirComentarioModalLabel">Agregar Comentario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="añadirComentarioForm" method="POST" action="../../CONTROLADOR/Jefe/Ticket/AgregarComentario.php">
+                <div class="modal-body">
+                    <input type="hidden" id="ticket_id_comentario" name="ticket_id_comentario" value="">
+                    <div class="form-group">
+                        <label for="tipo">Seleccionar tipo:</label>
+                        <select class="form-control" id="tipo" name="tipo">
+                            <option value="cliente">Cliente</option>
+                            <option value="auxiliar">Auxiliar</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentario">Comentario:</label>
+                        <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" name="guardar_comentario">Agregar Comentario</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cuando se abra el modal, asigna el ID del ticket al campo oculto correspondiente
+    $('.abrir-modal-comentario').on('click', function() {
+        var ticketId = $(this).data('ticketid');
+        $('#ticket_id_comentario').val(ticketId);
+    });
+</script>
 
 <script>
     // Cuando se abra el modal, asigna el ID del ticket al campo oculto correspondiente

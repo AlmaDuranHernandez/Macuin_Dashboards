@@ -54,7 +54,7 @@
                 return $nombreAuxiliar;
             } else {
                 // Si no se encontró el auxiliar, devolver un mensaje de error o un valor predeterminado
-                return "Auxiliar no encontrado";
+                return "Sin auxiliar asignado";
             }
         } else {
             // Si la preparación de la consulta falló, devolver un mensaje de error
