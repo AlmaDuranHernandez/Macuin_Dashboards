@@ -134,8 +134,6 @@ include '../../MODELO/Conexion.php';
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Correo Electrónico</th>
-                <th>Eliminar</th>
-                <th>Editar</th>
             </tr>
             <?php
             $sql = "SELECT usuario_id, nombre, email FROM usuario INNER JOIN roles ON id_rol = id WHERE Descripcion = 'Auxiliar'";
@@ -159,8 +157,6 @@ include '../../MODELO/Conexion.php';
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Correo Electrónico</th>
-                <th>Eliminar</th>
-                <th>Editar</th>
             </tr>
         </thead>
         <tbody>
@@ -237,68 +233,6 @@ include '../../MODELO/Conexion.php';
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="EditarModal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Formulario de Registro</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form action="../../CONTROLADOR/Jefe/GestionUsuario.php" method="POST">
-                        <div class="form-group">
-                            <label for="rol">Rol:</label>
-                            <select class="form-control" name="rol">
-                                <option value="0">Selecciona Rol</option>
-                                <?php
-                                // Consulta para obtener los roles desde la base de datos
-                                $sql = "SELECT * FROM roles";
-                                $result = $conn->query($sql);
-                                while ($row = $result->fetch_assoc()) {
-                                    echo "<option value='" . $row['id'] . "'>" . $row['Descripcion'] . "</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="departamento">Departamento:</label>
-                            <select class="form-control" name="departamento">
-                                <option value="0">Selecciona Departamento:</option>
-                                <?php
-                                // Consulta para obtener los departamentos desde la base de datos
-                                $sql = "SELECT * FROM departamentos";
-                                $result = $conn->query($sql);
-                                while ($row = $result->fetch_assoc()) {
-                                    echo "<option value='" . $row['id'] . "'>" . $row['departamento'] . "</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Contraseña:</label>
-                            <input type="password" class="form-control" id="password" name="pass">
-                        </div>
-                        <!-- Agrega aquí cualquier otro campo que necesites -->
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<br><br><br><br>
 
 <script>
     var selectTabla = document.getElementById("selectTabla");
