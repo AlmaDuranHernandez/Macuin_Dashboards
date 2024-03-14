@@ -1,33 +1,56 @@
 <?php
-    // Incluir la conexión a la base de datos
-    include('C:\xampp\htdocs\Proyecto\Macuin_Dashboards\MODELO\Conexion.php');
-    // Verificar si se ha enviado el formulario para añadir el auxiliar
-    if(isset($_POST['guardar_cambios'])) {
-        // Obtener los valores del formulario
-        $id_auxiliar = htmlspecialchars($_POST['id_auxiliar']);
-    
+// Incluir el archivo de conexión
+include '../../MODELO/Conexion.php';
 
-        // Actualizar el registro del ticket con el nuevo auxiliar
-        $sql_actualizar_auxiliar = "UPDATE tickets SET id_auxiliar = '$id_auxiliar' WHERE ticket_id = '$id_auxiliar'";
-        if ($conn->query($sql_actualizar_auxiliar) === TRUE) {
-            echo "<script> 
-                swal({
-                    title: 'HECHO',
-                    text: 'El auxiliar se añadió correctamente al ticket',
-                    icon: 'success',
-                    timer: 3000, 
-                    button: false 
-                }).then(function() {
-                    window.location.href = ''; // Redirecciona a la página de gestión de tickets
-                });
-            </script>";
-        } else {
-            echo "Error al actualizar el auxiliar del ticket: " . $conn->error;
-        }
+// Verificar si se ha enviado el formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verificar si se ha proporcionado un usuario_id y un ticket_id
+    if (isset($_POST['id_auxiliar']) && isset($_POST['ticket_id_modal'])) {
+        // Obtener los datos del formulario
+        $idAuxiliar = $_POST['id_auxiliar'];
+        $idTicket = $_POST['ticket_id_modal'];
+
+        // Llamar a la función para insertar el auxiliar en la tabla Tickets
+        insertarAuxiliar($idAuxiliar, $idTicket);
+    } else {
+        echo "Error: No se han proporcionado todos los datos necesarios.";
     }
+} else {
+    echo "Error: El formulario no se ha enviado correctamente.";
+}
+
+// Función para insertar el auxiliar en la tabla Tickets
+function insertarAuxiliar($idAuxiliar, $idTicket) {
+    // Obtener la conexión desde el archivo de conexión
+    $conn = new mysqli($host, $user, $pass, $db, $port);
+
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("Error de conexión: " . $conn->connect_error);
+    }
+
+    // Preparar la consulta SQL para insertar el id_auxiliar en la tabla Tickets
+    $sql = "UPDATE tickets SET id_auxiliar = ? WHERE ticket_id = ?";
+    $stmt = $conn->prepare($sql);
+
+    // Verificar si la consulta preparada es válida
+    if ($stmt === false) {
+        echo "Error en la consulta: " . $conn->error;
+    } else {
+        // Vincular los parámetros y ejecutar la consulta
+        $stmt->bind_param("ii", $idAuxiliar, $idTicket);
+        $stmt->execute();
+
+        // Verificar si la consulta se ejecutó correctamente
+        if ($stmt->affected_rows > 0) {
+            echo "Auxiliar añadido correctamente al ticket.";
+        } else {
+            echo "Error al añadir el auxiliar al ticket.";
+        }
+
+        // Cerrar la consulta y la conexión
+        $stmt->close();
+        $conn->close();
+    }
+}
 ?>
-
-
-
-
-

@@ -1,7 +1,6 @@
 <?php
 include '../../MODELO/Conexion.php';
 
-
 // Realiza la consulta para obtener los departamentos desde la base de datos
 $sql = "SELECT id, departamento FROM departamentos";
 $resultado = $conn->query($sql);
