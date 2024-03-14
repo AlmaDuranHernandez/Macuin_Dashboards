@@ -1,7 +1,10 @@
 <?php
     // Incluir la conexión a la base de datos
-    include '../../MODELO/Conexion.php';
+    include('C:\xampp\htdocs\Proyecto\Macuin_Dashboards\MODELO\Conexion.php');
 
+    
+
+   
     // Obtener los tickets de la base de datos
     $sql = "SELECT * FROM tickets";
     $resultado = $conn->query($sql);
@@ -82,20 +85,4 @@
             return array();
         }
     }
-
-    function insertarAuxiliar($idUsuario){
-
-        global $conn;
-        $idTicket = $_POST['ticket_id_modal'];
-        $idAuxiliar = $_POST['id_auxiliar'];
-        $sql = "UPDATE tickets SET id_auxiliar = ? WHERE ticket_id = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ii", $idAuxiliar, $idTicket);
-        $stmt->execute();
-        $stmt->close();
-        $conn->close();
-    }
-
-
-
 ?>

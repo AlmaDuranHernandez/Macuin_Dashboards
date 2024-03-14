@@ -20,11 +20,6 @@ header p {
     margin: 5px 0;
 }
 
-backgroud {
-    background-color: rgb(221, 210, 144);
-
-}
-
 hr {
     border: none;
     border-top: 1px solid #ccc;
@@ -44,7 +39,7 @@ hr {
     padding-left: 20px;
 }
 .container {
-    background-color: rgb(140, 199, 255); 
+    background-color: rgb(255, 224, 230); 
 }
 
 .header-top {

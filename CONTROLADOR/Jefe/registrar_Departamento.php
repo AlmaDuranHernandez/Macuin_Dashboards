@@ -1,6 +1,7 @@
 <?php
 session_start();
 include '../../MODELO/Conexion.php';
+include '../../VISTAS/General/CabeceraJefe.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["nombre_departamento"])) {
@@ -18,8 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($count > 0) {
                 // Si ya existe un departamento con el mismo nombre, asignar mensaje de error
-                $_SESSION['error_message'] = "Ya existe un departamento con el mismo nombre.";
-                header("Location: ../../VISTAS/Jefe/Gestion_departamento.php");
+                echo "<script>
+                swal('Error','El departamento ya existe en el sistema','error').then(function() {
+                    window.location =  '../../VISTAS/Jefe/Gestion_departamento.php';
+                });
+            </script>"; 
                 exit();
             } else {
                 // Insertar el departamento en la base de datos
@@ -27,14 +31,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt_insert->bind_param("s", $nombre_departamento);
                 $stmt_insert->execute();
 
-                // Verificar si se insertó correctamente
+             
                 if ($stmt_insert->affected_rows > 0) {
-                    // Redireccionar a la página de departamentos
-                    $_SESSION['success_message'] = "Departamento insertado correctamente.";
-                    header("Location: ../../VISTAS/Jefe/Gestion_departamento.php");
-                    exit();
+                    echo "<script> 
+                    swal({
+                        title: 'HECHO',
+                        text: 'El departamneto fue registrado correctamente',
+                        icon: 'success',
+                        timer: 2000, // El mensaje se mostrará durante 3 segundos
+                        button: false // No mostrará ningún botón para cerrar el mensaje
+                    }).then(function() {
+                        window.location.href = '../../VISTAS/Jefe/Gestion_departamento.php'; // Redirecciona a la página de inicio
+                    });
+                </script>";  
                 } else {
-                    $_SESSION['error_message'] = "Error al insertar el departamento.";
+                    echo "<script>
+                    swal('Error','El departamento no se pudo ingresar','error').then(function() {
+                        window.location =  '../../VISTAS/Jefe/Gestion_departamento.php';
+                    });
+                </script>"; 
                 }
 
                 $stmt_insert->close();
@@ -48,6 +63,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Si no se realizó ninguna acción, redirigir a la página de departamentos
-header("Location: ../../VISTAS/Jefe/Gestion_departamento.php");
-exit();
+
 ?>
