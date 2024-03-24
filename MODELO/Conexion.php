@@ -1,9 +1,9 @@
 <?php
-$host = 'roundhouse.proxy.rlwy.net';
-$port = '24462';
-$db   = 'macuindb';
-$user = 'root';
-$pass = '34-5GfBbab1BDAcB6bHbA3d2aHCd6hd6';
+ $host = '34.66.5.42';
+ $port = '3306';
+ $db   = 'macuindb';
+ $user = 'root';
+ $pass = 'pass';
 
 // Crear una conexión mysqli
 $conn = new mysqli($host, $user, $pass, $db, $port);

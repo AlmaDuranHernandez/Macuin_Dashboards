@@ -2,43 +2,38 @@
 include '../../MODELO/Conexion.php';
 include '../../VISTAS/General/Cabecera.php';
 
-
-
-
-$eliminar_id = $_POST['user_id'];
-echo $eliminar_id;
-      
-
 // Verificar si se recibieron los datos necesarios
-if(isset($_POST['roles'], $_POST['departamentos'], $_POST['nombres'], $_POST['emails'], $_POST['passs'])) {
+if(isset($_POST['roles'], $_POST['departamentos'], $_POST['nombres'], $_POST['emails'], $_POST['passs'], $_POST['user_id'])) {
     // Obtener los valores de los campos del formulario
     $rol = $_POST['roles'];
     $departamento = $_POST['departamentos'];
     $nombre = $_POST['nombres'];
     $email = $_POST['emails'];
     $password = $_POST['passs'];
+    $user_id = $_POST['user_id']; // Cambiar el nombre de la variable para reflejar su uso
 
     // Preparar la consulta SQL para actualizar el usuario
-    $sql = "UPDATE usuario SET id_rol = '$rol', id_departamento = '$departamento', nombre = '$nombre', email = '$email', pass = '$password' 
-    WHERE usuario_id = '$eliminar_id'";
+    $sql = "UPDATE usuario SET id_rol = ?, id_departamento = ?, nombre = ?, email = ?, pass = ? WHERE usuario_id = ?";
+
+    // Preparar la declaración SQL
+    $stmt = $conn->prepare($sql);
+
+    // Vincular parámetros
+    $stmt->bind_param("iisssi", $rol, $departamento, $nombre, $email, $password, $user_id);
 
     // Ejecutar la consulta
-    if ($conn->query($sql) === TRUE) {
-        echo "<script> 
-            swal({
-                title: 'HECHO',
-                text: 'Usuario actualizado correctamente',
-                icon: 'success',
-                timer: 3000, // El mensaje se mostrará durante 3 segundos
-                button: false // No mostrará ningún botón para cerrar el mensaje
-            }).then(function() {
-                window.location.href = '../../VISTAS/Jefe/Gestion_usuarios.php'; // Redirecciona a la página de inicio
-            });
-        </script>"; 
+    if ($stmt->execute()) {
+        // Redirigir con un mensaje de éxito
+        header("Location: ../../VISTAS/Jefe/Gestion_usuarios.php?success=1");
+        exit();
     } else {
-        echo "Error: " . $conn->error;
+        // Redirigir con un mensaje de error si la consulta falla
+        header("Location: ../../VISTAS/Jefe/Gestion_usuarios.php?error=1");
+        exit();
     }
 } else {
-    echo "Por favor, asegúrate de enviar todos los datos necesarios.";
+    // Redirigir si no se recibieron todos los datos necesarios
+    header("Location: ../../VISTAS/Jefe/Gestion_usuarios.php?error=2");
+    exit();
 }
 ?>
